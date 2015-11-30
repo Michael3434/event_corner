@@ -1,0 +1,136 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  font-family: "Roboto";
+}
+
+.btn-primary {
+  padding: 10px;
+  margin: 10px;
+  background-color: #2EBBC6;
+  border-color: #2EBBC6;
+}
+.btn-primary:hover {
+  background-color: #2EBBC6;
+  border-color: #2EBBC6;
+  opacity: 0.5;
+}
+.conv {
+  padding: 10px;
+  padding-left: 20px;
+
+}
+
+.pull_right {
+  text-align: right;
+  padding-right: 70px;
+}
+
+#title {
+  color: white;
+}
+
+#manager-user {
+  color: white;
+  background-color: #002846;
+}
+
+#manager-user a {
+  color: white;
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  background-color: #F37076;
+  border-color: #F37076;
+  color: white;
+}
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+.btn-select-hide {
+  display: none;
+}
+
+.read {
+    right: 0;
+    bottom: 0;
+    margin: -9px 8px;
+    position: absolute;
+    color: #2CBE42;
+    content: "\f00c";
+}
+
+.unread {
+    right: 0;
+    bottom: 0;
+    margin: -9px 8px;
+    position: absolute;
+    color: #C8D5B9;
+    content: "\f00c";
+}
+
+select {
+  color: #565a5c;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 10px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.select:before {
+  content:'\25bc';
+  position: absolute;
+  color: #82888a;
+  top: 40px;
+  right: 30px;
+  transform: scale(0.84, 0.42);
+}
+
+.text-left {
+  border: 0px;
+  border-radius: 15px;
+
+}
+
+
+#row {
+  border-radius: 15px;
+  border: 0px;
+}
+
+.navbar-fixed-top {
+    background-color: #002846;
+  }
+
+.navbar-default .navbar-nav > li > a {
+    color: #FFF;
+}
+
+
+
+.panel-heading.me {
+  background-color: rgba(163, 234, 241, 0.28);
+}
+

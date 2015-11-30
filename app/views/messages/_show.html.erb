@@ -1,0 +1,42 @@
+    <% if message.body != "" %>
+      <% if message.sent_messageable_id == current_user.id %>
+          <div class="panel panel-default text-left">
+            <div class="panel-heading me" id="row">
+              <div class="row">
+                <div class="col-md-12 pull-rigth conv pull_right" >
+                    From me<br>
+                    <%= "<i class='fa fa-check unread fa-2x'></i></i>".html_safe.html_safe if message.opened == false %>
+                    <%= "<i class='fa fa-check read fa-2x'></i></i>".html_safe if message.opened == true %>
+                    <% if !message.topic.nil? && !message.photo_id.nil?  %>
+                    <%= link_to "Download content", Photo.find(message.photo_id).image.url(), class: "try"  %>
+                    <% else %>
+                    <label><%= message.body %></label>
+                    <% end %>
+                </div><br>
+              </div>
+            </div>
+          </div><br>
+          <% else %>
+          <div class="panel panel-default text-left">
+            <div class="panel-heading" id="row">
+              <div class="row">
+                <div class="col-md-12 conv" >
+                  From <%= User.where(id: message.sent_messageable_id).first.email %><br>
+                   <% if !message.topic.nil? %>
+                    <%= link_to "Download content", Photo.find(message.photo_id).image.url() %>
+                    <% else %>
+                    <label><%= message.body %></label>
+                    <% end %>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    <% end %>
+
+
+<!-- messages_new_download_message_picture_path(:message => message) -->
+<!-- Photo.find(message.photo_id).image.url() -->
+
+

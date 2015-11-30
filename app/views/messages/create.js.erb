@@ -1,0 +1,5 @@
+var new_message = $("<%= j render 'messages/show', message: @message %>").hide();
+  $('#chat').prepend(new_message);
+  new_message.slideDown();
+  $('#text').val('');
+
